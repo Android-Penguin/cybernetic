@@ -35,7 +35,17 @@ body {
     transform: translateX(-50%);
     display: block;
     width: auto;
-    height: 100vh;
+    height: 125vh;
+}
+@media (max-width: 712px) {
+    .parallax-layer img {
+        height: 75vh;
+    }
+}
+@media (max-width: 600px) {
+    .parallax-layer img {
+        height: 50vh;
+    }
 }
 #sky {
     -webkit-transform: translateZ(-3px) scale(4);
