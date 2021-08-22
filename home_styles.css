@@ -1,17 +1,24 @@
-* {
+*{
+    box-sizing: border-box;
     /* box-shadow: 0 0 1px yellow; */
 }
 body {
     background-color: black;
 }
+
+/* ################## */
+/* # Parallax Setup # */
+/* ################## */
+
+/* 'Window' into parallax area */
 #parallax-wrapper {
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
     perspective: 1px;
-    perspective-origin: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 }
+/* Group of parallax layers, Each layer aligns to its group container */
 #parallax-group {
     position: relative;
     width: 100%;
@@ -19,6 +26,7 @@ body {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
+/* Generic styling for each parallax layer */
 .parallax-layer {
     width: 100%;
     height: auto;
@@ -27,41 +35,127 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    transform-origin: 100%;
 }
+/* 3D styling to set z-axis and scaling of each layer */
+#sky {
+    -webkit-transform: translateZ(-3px) scale(4);
+    transform: translateZ(-3px) scale(4) translateX(0px);
+    z-index: 0;
+}
+#mountain {
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2) translateY(-0.3vh);
+    z-index: 1;
+}
+#title-container {
+    -webkit-transform: translateZ(-0.5px) scale(1.5);
+    transform: translateZ(-0.5px) scale(1.5) translateY(0);
+    z-index: 2;
+}
+#grass {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0) scale(1) translateY(-0.6vh);
+    z-index: 3;
+}
+
+/* ################### */
+/* # Parallax images # */
+/* ################### */
+
+/* Styling for each image in the parallax display */
 .parallax-layer img {
+    display: block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
     width: auto;
-    height: 125vh;
+    height: var(--desktopHeight);
 }
+/* Changes mountain size according to screen width */
 @media (max-width: 712px) {
     .parallax-layer img {
-        height: 75vh;
+        height: var(--tabletHeight);
     }
 }
 @media (max-width: 600px) {
     .parallax-layer img {
-        height: 50vh;
+        height: var(--mobileHeight);
     }
 }
-#sky {
-    -webkit-transform: translateZ(-3px) scale(4);
-    transform: translateZ(-3px) scale(4) translateX(-12px);
+
+/* ###################### */
+/* # Website title text # */
+/* ###################### */
+
+/* Parallax layer container */
+#title-container {
+    display: flex;
+    height: var(--desktopHeight);
+    margin-top: 12vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#mountain {
-    -webkit-transform: translateZ(-1px) scale(2);
-    transform: translateZ(-1px) scale(2) translateX(-8px);
+/* Main title */
+#main-title {
+    margin: 0;
+    padding: 1vh 10vh 1vh 10vh;
+    text-align: center;
+    line-height: 1;
+    font-size: 11vh;
+    color: var(--specialSalmon);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.3vh;
 }
-#grass {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+/* LTD text on main title */
+#main-title span {
+    font-size: 2.2vh;
+    font-weight: 100;
+    color: white;
+}
+/* Subtitle */
+#subtitle {
+    margin: 1vh 0 1vh 0;
+    font-size: 3.85vh;
+    font-weight: 200;
+    color: white;
+}
+/* Changes text size according to screen width */
+@media (max-width: 712px) {
+    #title-container {
+        margin-top: 0vh;
+        height: var(--tabletHeight);
+    }
+    #main-title {
+        font-size: 6vh;
+    }
+    #main-title span {
+        font-size: 1.2vh;
+    }
+    #subtitle {
+        font-size: 2.1vh;
+    }
+}
+@media (max-width: 600px) {
+    #title-container {
+        margin-top: -8vh;
+        height: var(--mobileHeight);
+    }
+    #main-title {
+        font-size: 6vh;
+    }
+    #main-title span {
+        font-size: 1.2vh;
+    }
+    #subtitle {
+        font-size: 2.1vh;
+    }
 }
 
+
+/* A box lol */
 #a-box {
-    height: 1000px;
+    height: 1100px;
     width: 100%;
     background-color: rgb(0, 0, 0);
 }

@@ -1,4 +1,9 @@
 :root {
     /* Colours */
     --specialSalmon: #FF8787;
+
+    /* Parallax sizing */
+    --desktopHeight: 125vh;
+    --tabletHeight: 75vh;
+    --mobileHeight: 65vh;
 }
