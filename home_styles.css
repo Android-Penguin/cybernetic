@@ -1,11 +1,3 @@
-*{
-    box-sizing: border-box;
-    /* box-shadow: 0 0 1px yellow; */
-}
-body {
-    background-color: black;
-}
-
 /* ################## */
 /* # Parallax Setup # */
 /* ################## */
@@ -63,7 +55,8 @@ body {
 /* ################### */
 
 /* Styling for each image in the parallax display */
-.parallax-layer img {
+.parallax-layer > img {
+    opacity: var(--tempInvis);/**##############################################################################*/
     display: block;
     position: relative;
     left: 50%;
@@ -89,6 +82,7 @@ body {
 
 /* Parallax layer container */
 #title-container {
+    opacity: var(--tempInvis);/**##############################################################################*/
     display: flex;
     height: var(--desktopHeight);
     margin-top: 12vh;

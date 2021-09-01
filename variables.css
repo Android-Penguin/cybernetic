@@ -6,4 +6,9 @@
     --desktopHeight: 125vh;
     --tabletHeight: 75vh;
     --mobileHeight: 65vh;
+
+    /* Misc values */
+    --navHeight: 55px;
+    --tempInvis: 1;
+    /* --boxEdges: 0 0 1px yellow; */
 }

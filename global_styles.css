@@ -2,9 +2,11 @@
 
 * {
     box-sizing: border-box;
+    box-shadow: var(--boxEdges);
     font-family: Poppins, sans-serif;
 }
 html, body {
     margin: 0;
     padding: 0;
+    background-color: black;
 }

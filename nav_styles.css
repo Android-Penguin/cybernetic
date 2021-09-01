@@ -1,0 +1,64 @@
+#nav-container *{
+    box-sizing: border-box;
+    /* box-shadow: 0 0 1px yellow; */
+}
+
+/* Nav container (invisible) */
+#nav-container {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+/* List item container */
+#nav-container ul {
+    width: 100vw;
+    margin: 0;
+    padding: 0 40px 0 20px;
+}
+
+/* Generic nav item styling */
+.nav-left {
+    overflow: hidden;
+}
+.nav-right {
+    float: right;
+}
+#nav-container li {
+    width: auto;
+    height: var(--navHeight);
+    display: block;
+    border-bottom: solid;
+    border-bottom-color: white;
+}
+#nav-container li.nav-right a {
+    display: block;
+    width: 100px;
+    height: var(--navHeight);
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+/* Current page styling */
+#nav-container li.current-page, #nav-container li.current-page a {
+    color: #0085CF;
+    border-bottom-color: #0085CF;
+}
+/* Hover styling */
+#nav-container li:hover a {
+    font-weight: bold;
+}
+
+/* Nav logo LI settings */
+#nav-logo a {
+    display: block;
+    width: 150px;
+    height: var(--navHeight);
+    padding: 12px 0 12px 0;
+}
+#nav-logo img {
+    height: 100%;
+}
