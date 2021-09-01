@@ -11,13 +11,26 @@
     <link rel="stylesheet" href="footer_styles.css">
     <link rel="stylesheet" href="global_styles.css">
     <link rel="stylesheet" href="home_styles.css">
+    <link rel="stylesheet" href="tea.css">
 </head>
-<body>
+<body onload="imageLoaded()">
+    <!-- ! Load div -->
+    <div id="load-div">
+        <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg%22%3E">
+            <path d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34" stroke="#FFFFFF" stroke-width="2"></path>
+            <path id="teabag" fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z"></path>
+            <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#FFFFFF"></path>
+            <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <h1>Loading...</h1>
+    </div>
+
     <!-- ! Parallax mountain showcase -->
     <div id=parallax-wrapper>
         <div id="parallax-group">
-            <div id="sky" class="parallax-layer"><img src="mountain_sky_optimized.png"></div>
-            <div id="mountain" class="parallax-layer"><img src="mountain_main_optimized.png"></div>
+            <div id="sky" class="parallax-layer"><img src="mountain_sky_optimized.png" onload="imageLoaded()"></div>
+            <div id="mountain" class="parallax-layer"><img src="mountain_main_optimized.png" onload="imageLoaded()"></div>
             <div id="title-container" class="parallax-layer">
                 <h1 id="main-title">CYBERNETIC SYSTEMS<span>LTD</span></h1>
                 <h2 id="subtitle">Electrical & Control Systems Engineering</h2>
@@ -44,7 +57,7 @@
                     </ul>
                 </div>
 
-                <img src="mountain_grass_optimized.png">
+                <img src="mountain_grass_optimized.png" onload="imageLoaded()">
 
                 <!-- ! Content starts here -->
                 <div id="a-box">
@@ -58,6 +71,54 @@
     <!-- # Scripts # -->
     <!-- ########### -->
 
+    
+    <!-- Main image loading -->
+    <script>
+        const loadDiv = document.getElementById("load-div");// Load box
+        var firstRun = true;// Flag to test if first time function is run
+        var imagesLoaded = 0;// Initial number of images loaded
+        var stage1Fallback;
+        var stage2Fallback;
+        
+        function imageLoaded() {
+            console.log(firstRun);
+            if(firstRun) {
+                // Flag toggled to prevent statement rerunning
+                firstRun = false;
+                // After 2 seconds, fade out animation is automatically triggered as stage 1 fallback
+                stage1Fallback = setTimeout(() => {
+                    console.log("Stage 1 fallback triggered");
+                    loadDiv.classList.add("fade-out");
+                }, 2000);
+                // After 3 seconds, load div is automatically removed in case removal animation didn't take place
+                stage2Fallback = setTimeout(() => {
+                    console.log("Stage 2 fallback triggered");
+                    loadDiv.style.display = "none";
+                }, 3000);
+            }
+            // Increments loaded images by one
+            imagesLoaded++;
+            // Begins fade out animation when all images are loaded
+            if(imagesLoaded >= 3) {
+                console.log("Fade out started naturally");
+                loadDiv.classList.add("fade-out");
+                clearTimeout(stage1Fallback);
+            }
+        }
+
+        // function removes div when it becomes invisible
+        loadDiv.addEventListener("animationend", removeDiv);
+        function removeDiv() {
+            console.log("Box deleted naturally");
+            loadDiv.style.display = "none";
+            clearTimeout(stage2Fallback);
+        }
+    </script>
+
+        
+
+    <!-- Global functions -->
     <script src="global_functions.js"></script>
+
 </body>
 </html>
