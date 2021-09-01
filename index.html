@@ -60,8 +60,34 @@
                 <img src="mountain_grass_optimized.png" onload="imageLoaded()">
 
                 <!-- ! Content starts here -->
-                <div id="a-box">
-            
+                <div id="content-container">
+                    <!-- ?Child 1 - About company intro -->
+                    <div>
+                        <h1>Who Are We?</h1>
+                        <p>Cybernetic Systems specialise in industrial systems integration across a wide range of industries,
+                        including dairy, water and wastewater, power generation and distribution, and many others. We have many 
+                        years of experience across a variety of products including PLCs, SCADA systems, Telemetry, and radio networks.</p>
+                    </div>
+                    <!-- ?Child 2 - Quick link headings -->
+                    <div>
+                        <h1>Interested?</h1>
+                        <p>Take a look at our:</p>
+                    </div>
+                    <!-- ?Child 3 - Quick links -->
+                    <div>
+                        <a><div class="link-container">
+                            <h2>Services</h2>
+                            <div></div>
+                        </div></a>
+                        <a><div class="link-container">
+                            <h2>Projects</h2>
+                            <div></div>
+                        </div></a>
+                        <a href="contact.html"><div class="link-container">
+                            <h2>Contact</h2>
+                            <div></div>
+                        </div></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,16 +111,16 @@
             if(firstRun) {
                 // Flag toggled to prevent statement rerunning
                 firstRun = false;
-                // After 2 seconds, fade out animation is automatically triggered as stage 1 fallback
+                // After 3 seconds, fade out animation is automatically triggered as stage 1 fallback
                 stage1Fallback = setTimeout(() => {
                     console.log("Stage 1 fallback triggered");
                     loadDiv.classList.add("fade-out");
-                }, 2000);
-                // After 3 seconds, load div is automatically removed in case removal animation didn't take place
+                }, 3000);
+                // After 4 seconds, load div is automatically removed in case event listener didn't delete div
                 stage2Fallback = setTimeout(() => {
                     console.log("Stage 2 fallback triggered");
                     loadDiv.style.display = "none";
-                }, 3000);
+                }, 4000);
             }
             // Increments loaded images by one
             imagesLoaded++;
