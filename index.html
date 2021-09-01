@@ -23,9 +23,10 @@
                 <h2 id="subtitle">Electrical & Control Systems Engineering</h2>
             </div>
             <div id="grass" class="parallax-layer">
-                <!-- ! Nav-bar -->
+                <!-- ! Nav bar -->
                 <div id=nav-container style="transform: translateY(0.6vh);">
                     <ul>
+                        <div id="menu-button" onclick="openMobileNav(this)"><div></div></div>
                         <li id="contacts-li" class="nav-right"><a href="contact.html">Contact</a></li>
                         <li id="projects-li" class="nav-right"><a>Projects</a></li>
                         <li id="services-li" class="nav-right"><a>Services</a></li>
@@ -33,8 +34,18 @@
                         <li id="nav-logo" class="nav-left"><a href="index.html"><img src="cybernetic_logo_optimized.png"></a></li>
                     </ul>
                 </div>
+                <!-- ! Mobile Nav bar -->
+                <div id=mobile-nav-container style="transform: translateY(0.6vh);">
+                    <ul>
+                        <li id="home-li" class="current-page"><a href="index.html">Home</a></li>
+                        <li id="services-li"><a>Services</a></li>
+                        <li id="projects-li"><a>Projects</a></li>
+                        <li id="contacts-li"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
                 <img src="mountain_grass_optimized.png">
+
                 <!-- ! Content starts here -->
                 <div id="a-box">
             
@@ -42,5 +53,11 @@
             </div>
         </div>
     </div>
+
+    <!-- ########### -->
+    <!-- # Scripts # -->
+    <!-- ########### -->
+
+    <script src="global_functions.js"></script>
 </body>
 </html>

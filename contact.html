@@ -16,6 +16,7 @@
     <!-- Nav-bar -->
     <div id=nav-container>
         <ul>
+            <div id="menu-button" onclick="openMobileNav(this)"><div></div></div>
             <li id="contacts-li" class="nav-right current-page"><a href="contact.html">Contact</a></li>
             <li id="projects-li" class="nav-right"><a>Projects</a></li>
             <li id="services-li" class="nav-right"><a>Services</a></li>
@@ -23,7 +24,22 @@
             <li id="nav-logo" class="nav-left"><a href="index.html"><img src="cybernetic_logo_optimized.png"></a></li>
         </ul>
     </div>
+    <!-- ! Mobile Nav bar -->
+    <div id=mobile-nav-container style="transform: translateY(0.6vh);">
+        <ul>
+            <li id="home-li"><a href="index.html">Home</a></li>
+            <li id="services-li"><a>Services</a></li>
+            <li id="projects-li"><a>Projects</a></li>
+            <li id="contacts-li" class="current-page"><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
     <div id="content" style="height: 1000px;">
 
     </div>
+
+    <!-- ########### -->
+    <!-- # Scripts # -->
+    <!-- ########### -->
+
+    <script src="global_functions.js"></script>
 </body>
