@@ -29,8 +29,8 @@
     <!-- ! Parallax mountain showcase -->
     <div id=parallax-wrapper>
         <div id="parallax-group">
-            <div id="sky" class="parallax-layer"><img src="mountain_sky_optimized.png" onload="imageLoaded()"></div>
-            <div id="mountain" class="parallax-layer"><img src="mountain_main_optimized.png" onload="imageLoaded()"></div>
+            <div id="sky" class="parallax-layer"><img src="mountain_sky_optimized.png" alt="sky" onload="imageLoaded()"></div>
+            <div id="mountain" class="parallax-layer"><img src="mountain_main_optimized.png" alt="mountain" onload="imageLoaded()"></div>
             <div id="title-container" class="parallax-layer">
                 <h1 id="main-title">CYBERNETIC SYSTEMS<span>LTD</span></h1>
                 <h2 id="subtitle">Electrical & Control Systems Engineering</h2>
@@ -44,7 +44,7 @@
                         <li id="projects-li" class="nav-right"><a>Projects</a></li>
                         <li id="services-li" class="nav-right"><a>Services</a></li>
                         <li id="home-li" class="nav-right current-page"><a href="index.html">Home</a></li>
-                        <li id="nav-logo" class="nav-left"><a href="index.html"><img src="cybernetic_logo_optimized.png"></a></li>
+                        <li id="nav-logo" class="nav-left"><a href="index.html"><img src="cybernetic_logo_optimized.png" alt="cybernetic logo"></a></li>
                     </ul>
                 </div>
                 <!-- ! Mobile Nav bar -->
@@ -57,9 +57,9 @@
                     </ul>
                 </div>
 
-                <img src="mountain_grass_optimized.png" onload="imageLoaded()">
+                <img src="mountain_grass_optimized.png" alt="grass" onload="imageLoaded()">
 
-                <!-- ! Content starts here -->
+                <!-- ! Content container -->
                 <div id="content-container">
                     <!-- ?Child 1 - About company intro -->
                     <div>
@@ -87,6 +87,35 @@
                             <h2>Contact</h2>
                             <div></div>
                         </div></a>
+                    </div>
+                </div>
+                <!-- ! Footer -->
+                <div id=footer>
+                    <!-- Mail to link -->
+                    <a id="footer-mail" href="mailto:info@cybernetic.co.nz" target="_blank">
+                        <div><img src="mail_icon.png" alt="mail icon"></div>
+                        <span>info@cybernetic.co.nz</span>
+                    </a>
+
+                    <!-- Back to top button -->
+                    <div id="back-to-top" onclick="backToTop()">
+                        <svg id="elevator-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px">
+                            <path d="M70,47.5H30c-1.4,0-2.5,1.1-2.5,2.5v40c0,1.4,1.1,2.5,2.5,2.5h40c1.4,0,2.5-1.1,2.5-2.5V50C72.5,48.6,71.4,47.5,70,47.5z   M47.5,87.5h-5v-25h5V87.5z M57.5,87.5h-5v-25h5V87.5z M67.5,87.5h-5V60c0-1.4-1.1-2.5-2.5-2.5H40c-1.4,0-2.5,1.1-2.5,2.5v27.5h-5  v-35h35V87.5z"></path>
+                            <path d="M50,42.5c1.4,0,2.5-1.1,2.5-2.5V16l5.7,5.7c0.5,0.5,1.1,0.7,1.8,0.7s1.3-0.2,1.8-0.7c1-1,1-2.6,0-3.5l-10-10  c-1-1-2.6-1-3.5,0l-10,10c-1,1-1,2.6,0,3.5c1,1,2.6,1,3.5,0l5.7-5.7v24C47.5,41.4,48.6,42.5,50,42.5z"></path>
+                        </svg>
+                        <span>Back to Top</span>
+                    </div>
+
+                    <!-- Credits links -->
+                    <div id="credits-container">
+                        <a href="https://kleung.xyz/" rel="noopener" target="_blank">
+                            <span>Designed by:</span>
+                            <img src="kl.svg" alt="KL">
+                        </a>
+                        <a href="https://www.shauncb.xyz/" rel="noopener" target="_blank">
+                            <span>Coded by:</span>
+                            <img src="scb.svg" alt="SCB">
+                        </a>
                     </div>
                 </div>
             </div>

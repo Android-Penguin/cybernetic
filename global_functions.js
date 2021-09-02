@@ -4,3 +4,8 @@ function openMobileNav(button) {
     button.classList.toggle("menu-open");
     document.getElementById("mobile-nav-container").classList.toggle("expand-menu");
 }
+
+// Scroll to top of page
+function backToTop() {
+    document.getElementById("nav-container").scrollIntoView({ behavior: "smooth", block: "end" });
+}

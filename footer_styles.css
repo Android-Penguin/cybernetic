@@ -1,0 +1,115 @@
+/* ######################### */
+/* # Generic footer styles # */
+/* ######################### */
+
+/* Footer container */
+#footer {
+    display: flex;
+    min-height: 70px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A4DEFF;
+}
+
+
+/* ###################### */
+/* # Mailto link styles # */
+/* ###################### */
+
+/* Mail icon and text container */
+#footer-mail {
+    display: flex;
+    height: 55px;
+    margin: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+}
+/* Circular div with icon */
+#footer-mail div {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+}
+/* Icon inside circle div */
+#footer-mail img {
+    width: 70%;
+    height: auto;
+}
+/* Mail text */
+#footer-mail span {
+    font-size: 20px;
+    margin: 0 0 0 10px;
+    color: black;
+}
+#footer-mail:hover span {
+    text-decoration: underline;
+}
+
+
+/* ###################### */
+/* # Back to Top button # */
+/* ###################### */
+
+/* Container for icon and text */
+#back-to-top {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+#back-to-top svg {
+    height: 40px;
+}
+#back-to-top span {
+    color: black;
+    text-decoration: none;
+}
+#back-to-top:hover span {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    #back-to-top {
+        display: none;
+    }
+}
+
+
+/* ######################### */
+/* # Website credit styles # */
+/* ######################### */
+
+/* Container for both sets of credits */
+#credits-container {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+/* Link container for each title+image */
+#credits-container a {
+    display: flex;
+    text-decoration: none;
+    margin: 10px;
+    align-items: center;
+}
+/* Designed by/Coded by text */
+#credits-container span {
+    margin: 0 10px 0 0;
+    font-size: 20px;
+    color: black;
+}
+#credits-container a:hover span {
+    text-decoration: underline;
+}
+/* KL and SCB icons */
+#credits-container img {
+    height: 50px;
+}
