@@ -1,3 +1,99 @@
-#content {
-    height: 100vh;
+/* ######################## */
+/* # Generic page styling # */
+/* ######################## */
+
+/* Full page container */
+#content-container {
+    min-height: 100vh;
+    padding-top: var(--navHeight);
+    margin: 0 0 100px 70px;
+}
+/* Page title */
+#content-container > h1 {
+    margin: 55px 0 55px 0;
+    font-size: 50px;
+    color: var(--specialSalmon);
+}
+
+
+/* ########################## */
+/* # Services boxes styling # */
+/* ########################## */
+
+/* Flex container */
+#services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 18px;
+}
+/* Individual box  */
+#services-container > div {
+    width: 550px;
+    min-height: 400px;
+    margin: 0 0 90px 0;
+    padding: 20px 20px 0 20px;
+    border-style: solid;
+    border-color: white;
+}
+/* Right margin for first and third boxes */
+#services-container > div:nth-child(odd) {
+    margin: 0 90px 90px 0;
+}
+/* Box title */
+#services-container h2 {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 7px;
+    font-size: 1.39em;
+    color: #A4DEFF;
+    border-bottom: solid;
+    border-bottom-color: white;
+}
+/* List wrapper */
+#services-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-gap: 1em;
+}
+/* Bullet point styling */
+#services-container ul li::before {
+    content: '\003E';
+}
+/* LI styling */
+#services-container li {
+    display: grid;
+    grid-template-columns: 0 1fr;
+    grid-gap: 1em;
+    align-items: start;
+    font-size: 1em;
+    line-height: 1.25;
+    color: white;
+}
+@media (max-width:712px) {
+    /* Alter margins on main content container */
+    #content-container {
+        min-height: 100vh;
+        padding-top: var(--navHeight);
+        margin: 0 20px 100px 20px;
+    }
+    /* Centre title */
+    #content-container > h1 {
+        text-align: center;
+    }
+    /* Centre boxes and shrink font size */
+    #services-container {
+        justify-content: center;
+        font-size: 16px;
+    }
+    /* Makes divs variable width */
+    #services-container > div {
+        max-width: 550px;
+    }
+    /* Remove wacky margins on first and third children */
+    #services-container > div:nth-child(odd) {
+        margin: 0 0 90px 0;
+    }
+
 }
