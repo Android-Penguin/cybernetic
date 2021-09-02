@@ -8,6 +8,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: black;
 }
 h1, h2, p {
