@@ -1,3 +1,80 @@
-#content {
-    height: 100vh;
+/* ######################## */
+/* # Generic page styling # */
+/* ######################## */
+
+/* Full page container */
+#content-container {
+    min-height: 100vh;
+    padding-top: var(--navHeight);
+    margin: 0 0 100px 70px;
+}
+/* Page title */
+#content-container > h1 {
+    margin: 55px 0 55px 0;
+    font-size: 50px;
+    color: var(--specialSalmon);
+}
+
+
+/* ########################### */
+/* # Contact details styling # */
+/* ########################### */
+
+/* Invis container */
+#details-container {
+    font-size: 18px;
+}
+/* Our details title */
+#details-container h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.39em;
+    color: #A4DEFF;
+}
+/* White border box holding detail sets */
+#details-border {
+    max-width: 400px;
+    min-height: 400px;
+    padding: 30px;
+    border-style: solid;
+    border-color: white;
+}
+/* Container for each detail set */
+#details-container > div > div {
+    display: flex;
+    margin: 0 0 20px 0;
+    align-items: flex-start;
+}
+#details-container img {
+    width: 2em;
+}
+#details-container span {
+    display: block;
+    margin: 0.6em;
+    font-size: 1em;
+    color: white;
+}
+#details-container a {
+    color: white;
+    text-decoration: none;
+}
+#details-container a:hover{
+    text-decoration: underline;
+}
+
+
+
+@media (max-width:712px) {
+    /* Alter margins on main content container */
+    #content-container {
+        min-height: 100vh;
+        padding-top: var(--navHeight);
+        margin: 0 20px 100px 20px;
+    }
+    /* Centre title */
+    #content-container > h1 {
+        text-align: center;
+    }
+    #details-container {
+        font-size: 16px;
+    }
 }
