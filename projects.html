@@ -34,8 +34,70 @@
         </ul>
     </div>
     <!-- ! Content -->
-    <div id="content">
-
+    <div id="content-container">
+        <!-- Projects title -->
+        <h1>Our Projects</h1>
+        <!-- Container for all projects -->
+        <div id="projects-container">
+            <!-- ?Mount Ruapehu Lahar Warning System -->
+            <div class="project-div">
+                <!-- Project image -->
+                <div><img src="projects_images/skifield.webp" alt="Mount Ruapehu Skifield"></div>
+                <!-- Project title -->
+                <h3>Mount Ruapehu Lahar Warning System</h3>
+                <!-- Project description -->
+                <p>The popular Whakapapa skifield is located on the slopes of Mount Ruapehu, an active volcano which has erupted 
+                    several times in recent years. Using eruption monitoring information provided by GNS, Cybernetic developed 
+                    a warning system to alert both skifield staff and members of the public to the possibility of a lahar 
+                    (volcanic mudflow). Being potentially critical to public safety, the system utilises redundant master 
+                    stations in different locations, as well as multiple communications paths and alerting methods.
+                    <br><br>
+                    We continue to work with both DOC and the skifield operators to provide regular maintenance and ongoing support.</p>
+                <!-- Project expand button -->
+                <span onclick="expandInfo(this)">Click to learn more</span>
+            </div>
+            <!-- ?Cavotec Vacuum Mooring Systems -->
+            <div class="project-div">
+                <!-- Project image -->
+                <div><img src="projects_images/cavotec.webp" alt="Cavotec Vacuum Mooring Systems"></div>
+                <!-- Project title -->
+                <h3>Cavotec Vacuum Mooring Systems</h3>
+                <!-- Project description -->
+                <p>Cavotec Moormaster manufacture a unique vacuum ship mooring system used in a number of ports around the world. 
+                    Cybernetic have supplied commissioning engineering services for several Cavotec installation and refit projects in 
+                    Australia and Canada.</p>
+                <!-- Project expand button -->
+                <span onclick="expandInfo(this)">Click to learn more</span>
+            </div>
+            <!-- ?Yamato Checkweigher Datalogging Systems -->
+            <div class="project-div">
+                <!-- Project image -->
+                <div><img src="projects_images/checkweigher.webp" alt="Cavotec Vacuum Mooring Systems"></div>
+                <!-- Project title -->
+                <h3>Yamato Checkweigher Datalogging Systems</h3>
+                <!-- Project description -->
+                <p>In partnership with tna Solutions, we have developed a serial interface to Yamato checkweighers, enabling weight data to 
+                    be written to an SQL database or displayed on an HMI screen. The Yamato units use a proprietary serial protocol, requiring 
+                    custom communication code - something we have considerable experience with. If you have a tricky interfacing / comms problem, 
+                    let us know - we may well be able to help!</p>
+                <!-- Project expand button -->
+                <span onclick="expandInfo(this)">Click to learn more</span>
+            </div>
+            <!-- ?Tunnel Boring Machine -->
+            <div class="project-div">
+                <!-- Project image -->
+                <div><img src="projects_images/tbm.webp" alt="Cavotec Vacuum Mooring Systems"></div>
+                <!-- Project title -->
+                <h3>Tunnel Boring Machine</h3>
+                <!-- Project description -->
+                <p>This pipe-jacking machine was used to install a relocated stormwater main 20m below Auckland's Albert St, as part of the 
+                    enabling works for the City Rail Link project. As the machine had not been used for some years it required a significant 
+                    upgrade prior to the job - we were able to assist with modifying and expanding the control circuits, making additions to 
+                    the PLC program, and creating new HMI screens.</p>
+                <!-- Project expand button -->
+                <span onclick="expandInfo(this)">Click to learn more</span>
+            </div>
+        </div>
     </div>
     <!-- ! Footer -->
     <div id="footer">
@@ -70,6 +132,27 @@
     <!-- ########### -->
     <!-- # Scripts # -->
     <!-- ########### -->
+
+    <!-- Expand project info -->
+    <script>
+        function expandInfo(button) {
+            // Paragraph element to be expanded
+            var expandingP = button.previousElementSibling
+            // Adds transition style to element
+            expandingP.style.transition = "all 0.3s";
+            // Toggles expanded class
+            expandingP.classList.toggle("learn-more-expand");
+            if(expandingP.classList.contains("learn-more-expand")) {
+                // Paraph expanded, border color salmon and text saying 'minimise'.
+                button.style.borderTopColor = "var(--specialSalmon)";
+                button.innerHTML = "Click to minimise";
+            } else {
+                // Paragraph hidden, border color black and text saying 'learn more'/
+                button.style.borderTopColor = "black";
+                button.innerHTML = "Click to learn more";
+            }
+        }
+    </script>
 
     <script src="global_functions.js"></script>
 </body>
