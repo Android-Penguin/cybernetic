@@ -31,14 +31,10 @@
 #services-container > div {
     width: 550px;
     min-height: 400px;
-    margin: 0 0 90px 0;
+    margin: 0 90px 90px 0;
     padding: 20px 20px 0 20px;
     border-style: solid;
     border-color: white;
-}
-/* Right margin for first and third boxes */
-#services-container > div:nth-child(odd) {
-    margin: 0 90px 90px 0;
 }
 /* Box title */
 #services-container h2 {
@@ -87,13 +83,9 @@
         justify-content: center;
         font-size: 16px;
     }
-    /* Makes divs variable width */
+    /* Makes divs variable width and changes margin settings */
     #services-container > div {
         max-width: 550px;
-    }
-    /* Remove wacky margins on first and third children */
-    #services-container > div:nth-child(odd) {
         margin: 0 0 90px 0;
     }
-
 }
